@@ -1,0 +1,68 @@
+---
+title: "Order of Sound Changes"
+author: Thomas W. Broadwater
+mainfont: Brill
+output:
+  pdf_document:
+    latex_engine: xelatex
+  html_document: default
+---
+
+# Initial Notes
+
+
+
+## The Oxford Introduction to Proto-Indo-European and the Proto-Indo-European World
+
+-  Mallory and Adams kindly provided my least favorite table ever
+  -  Vowels are implied to be consonants? I know they're not, but the table seems to think so
+  -  No mention of syllabic consonants
+  -  What the actual *heck* does *r/3* mean???
+    -  I wonder if this isn't an encoding error...
+    -  Quote, 'The liquids, nasals, and semivowels are listed in both their consonantal and vocalic forms'
+        -  It has to be a typo, like the palatal series
+
+|             | Unvoiced | Voiced | Voiced Aspirate |
+|-------------|----------|--------|-----------------|
+| Labials     | p        | b      | bh              |
+| Dentals     | t        | d      | dh              |
+| Palatals    | k        | g      | gh              |
+| Velars      | k        | g      | gh              |
+| Labiovelars | kʷ       | gʷ     | ghʷ             |
+| Sibilants   | s        |        |                 |
+| Laryngeals  | h₁       | h₂     | h₃ & h₄         |
+| Liquids     | r/3      | l/C    |                 |
+| Nasals      | m/i      | n/     |                 |
+| Semivowels  | i/y      | u/w    |                 |
+| Vowels      | e        | o      | a               |
+|             | ē        | ō      | ā               |
+
+-  Laryngeal consonants affect the adjacent vowel
+  - *\*h₁* has no affect
+  - *\*h₂* and *\*h₄* change *\*-e-* to *\*-a-*
+    -  Only distinguishable following two conditions:
+        -  Word initial
+        -  Reflex attested in Anatolian
+    -  If they can't be distinguished, they are annotated as *\*hₐ*
+  -  *\*h₃* changes *\*-o-* to *\*-e-*
+-  If we suspect a laryngeal but can't identify it, it is annotated as *\*hₓ*
+
+-  I'm going to try and edit this table
+
+|             | Unvoiced | Voiced  | Voiced Aspirate |
+|-------------|----------|---------|-----------------|
+| Labials     | p        | b       | bh              |
+| Dentals     | t        | d       | dh              |
+| Palatals    | kʲ       | gʲ      | ghʲ             |
+| Velars      | k        | g       | gh              |
+| Labiovelars | kʷ       | gʷ      | ghʷ             |
+| Sibilants   | s        |         |                 |
+| Laryngeals  | h₁       | h₂      | h₃ & h₄         |
+| Liquids     | r/r̥      | l/l̥     |                 |
+| Nasals      | m/m̥      | n/n̥     |                 |
+| Semivowels  | i/y (i̯)  | u/w (u̯) |                 |
+| Vowels      | e        | o       | a               |
+|             | ē        | ō       | ā               |
+
+
+

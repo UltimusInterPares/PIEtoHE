@@ -2,6 +2,8 @@
 title: "Order of Sound Changes"
 author: Thomas W. Broadwater
 mainfont: Brill
+header-includes:
+   - \usepackage{phonrule, amsmath}
 output:
   pdf_document:
     latex_engine: xelatex
@@ -18,9 +20,7 @@ output:
   -  Vowels are implied to be consonants? I know they're not, but the table seems to think so
   -  No mention of syllabic consonants
   -  What the actual *heck* does *r/3* mean???
-    -  I wonder if this isn't an encoding error...
-    -  Quote, 'The liquids, nasals, and semivowels are listed in both their consonantal and vocalic forms'
-        -  It has to be a typo, like the palatal series
+      -  I wonder if this isn't an encoding error...
 
 |             | Unvoiced | Voiced | Voiced Aspirate |
 |-------------|----------|--------|-----------------|
@@ -64,5 +64,83 @@ output:
 | Vowels      | e        | o       | a               |
 |             | ē        | ō       | ā               |
 
+-  Ablaut sucks
 
+| Long | Short | Zero |
+|------|-------|------|
+| e    | o     | ∅    |
+| ē    | ō     | ∅    |
+| ehₓ | ohₓ   | ∅hₓ  |
+
+
+## New Comparative Grammar of Greek and Latin
+
+### Short Vowels
+
+PIE \*i and \*u were incredibly well behaved, and largely retained their
+qualities in G.
+
+\[
+  \phon{\mathrm{*i}}{\mathrm{ι}}
+\]
+
+\[
+  \phon{\mathrm{*u}}{\mathrm{υ}}
+\]
+
+There is possibly a word-initial reflex for \*HV segments, though the data
+is inconclusive.
+
+\[
+  \phonl{*\mathrm{h\textsubscript{1}u}}{\mathrm{ευ}}{\#}
+\]
+
+\[
+  \phonl{*\mathrm{h\textsubscript{2}u}}{\mathrm{αυ}}{\#}
+\]
+
+The vowel \*e and the segment \*h₁e have identical reflexes in G, and are
+difficult to distinguish w/o looking for evidence in other language families.
+
+\[
+  \phon
+    {
+      \left.
+      \begin{matrix}
+        \mathrm{*e} \\
+        \mathrm{*h\textsubscript{1}e}
+      \end{matrix}
+      \right\}
+    }
+    {
+      \mathrm{ε}
+    }
+\]
+
+\*e may have become \*o in "strongly labial environment[s]."
+This is not explained any futher.
+
+\[
+  \phonb{\mathrm{\*e}}{\mathrm{\*o}}{\mathrm{¿}~}{~\mathrm{?}}
+\]
+
+The prefix \*en- may have returned ἰγ- (/ing/),
+though this is poorly evidenced.
+
+A *lot* of vowels returned G ο.
+
+\[
+  \phon
+    {
+      \left.
+      \begin{matrix}
+        \mathrm{o} \\
+        \mathrm{h\textsubscript{2}o} \\
+        \mathrm{h\textsubscript{3}o} \\
+        \mathrm{h\textsubscript{3}e}
+      \end{matrix}
+      \right\}
+    }
+    {o}
+\]
 

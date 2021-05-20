@@ -1,0 +1,130 @@
+---
+title: "Genesis of Greek"
+subtitle: "Notes"
+author: "Thomas Broadwater"
+header-includes:
+- \usepackage[utf8]{inputenc}
+- \usepackage[T1]{fontenc}
+- \DeclareUnicodeCharacter{02B0}{\textsuperscript{h}}
+- \DeclareUnicodeCharacter{02B7}{\textsuperscript{w}}
+- \DeclareUnicodeCharacter{02C8}{\textsuperscript{\tiny|}}
+- \DeclareUnicodeCharacter{02CC}{\textsubscript{\tiny|}}
+- \DeclareUnicodeCharacter{2081}{\textsubscript{1}}
+- \DeclareUnicodeCharacter{2082}{\textsubscript{2}}
+- \DeclareUnicodeCharacter{2083}{\textsubscript{3}}
+- \DeclareUnicodeCharacter{2093}{\textsubscript{x}}
+- \DeclareUnicodeCharacter{2090}{\textsubscript{a}}
+
+output: pdf_document
+---
+
+PIE voiced aspirated stops become PG voiceless aspirated stops.
+
+\[
+\begin{matrix}
+  \mathrm{G^{(w)h}} \\
+  \left[
+    \begin{matrix}
+      +~\mathrm{cons} \\
+      -~\mathrm{cont} \\
+      +~\mathrm{s.g.} \\
+      +~\mathrm{voi}
+    \end{matrix}
+  \right]
+\end{matrix}
+\rightarrow
+\begin{matrix}
+  \mathrm{C^{(w)h}} \\
+  \left[
+    \begin{matrix}
+      -~\mathrm{voi}
+    \end{matrix}
+  \right]
+\end{matrix}
+\]
+
+```{r Aspirate Devoicing}
+inventory <- c("dʰugh₂ter-", "sroˈbʰeyoh₂", "ˈh₂eǵrom", "ˈtreyes")
+inventory <- gsub("(d)(ʰ|ʷʰ|ʰʷ)", "t\\2", inventory, perl = T)
+inventory <- gsub("(b)(ʰ|ʷʰ|ʰʷ)", "p\\2", inventory, perl = T)
+inventory <- gsub("(g)(ʰ|ʷʰ|ʰʷ)", "k\\2", inventory, perl = T)
+```
+
+PIE \*s becomes PG \*h at the beginning
+of a word or intervocalically
+
+\[
+\mathrm{*s}
+\rightarrow
+\mathrm{*h}
+~/~
+\left\{
+  \begin{tabular}{c}
+    \#\rule[-1.5pt]{1.5ex}{.5pt}V \\
+    V\rule[-1.5pt]{1.5ex}{.5pt}V
+  \end{tabular}
+\right.
+\]
+
+PIE intervocalic \*y is elided.
+
+```{r Yod Elision}
+inventory <- gsub("(a|e|i|o|u)y(a|e|i|o|u)", "\\1\\2", inventory, perl = T)
+```
+
+\[
+\mathrm{*y}
+\rightarrow
+\emptyset
+~/~
+\mathrm{V}\rule[-1.5pt]{1.5ex}{.5pt}\mathrm{V}
+\]
+
+Word initial shenanigans concerning PIE \*y
+that have no solid explanation
+
+\[
+\mathrm{*s}
+\rightarrow
+\mathrm{*h}
+~/~
+\left\{
+  \begin{matrix}
+    \#\rule[-1.5pt]{1.5ex}{.5pt}V \\
+    V\rule[-1.5pt]{1.5ex}{.5pt}V
+  \end{matrix}
+\right.
+\]
+
+PIE 2ord final \*m becomes PG \*n
+
+```{r Nasal Coronalization}
+inventory <- gsub("m$", "n", inventory, perl = T)
+```
+
+\[
+\begin{matrix}
+  \mathrm{*m} \\
+  \left[
+    \begin{matrix}
+      +~\mathrm{cons} \\
+      -~\mathrm{son} \\
+      +~\mathrm{lab} \\
+      -~\mathrm{cor} \\
+      +~\mathrm{nas}
+    \end{matrix}
+  \right]
+\end{matrix}
+\rightarrow
+\begin{matrix}
+  \mathrm{*n} \\
+  \left[
+    \begin{matrix}
+      -~\mathrm{lab} \\
+      +~\mathrm{cor}
+    \end{matrix}
+  \right]
+\end{matrix}
+~/~
+\rule[-1.5pt]{1.5ex}{.5pt}\#
+\]

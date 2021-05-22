@@ -14,6 +14,8 @@ header-includes:
 - \DeclareUnicodeCharacter{2083}{\textsubscript{3}}
 - \DeclareUnicodeCharacter{2093}{\textsubscript{x}}
 - \DeclareUnicodeCharacter{2090}{\textsubscript{a}}
+- \DeclareUnicodeCharacter{1E43}{\d{m}}
+- \DeclareUnicodeCharacter{1E47}{\d{n}}
 
 output: pdf_document
 ---
@@ -44,7 +46,8 @@ PIE voiced aspirated stops become PG voiceless aspirated stops.
 \]
 
 ```{r Aspirate Devoicing}
-inventory <- c("dʰugh₂ter-", "sroˈbʰeyoh₂", "ˈh₂eǵrom", "ˈtreyes")
+inventory <- c("dʰugh₂ter-", "sroˈbʰeyoh₂", "ˈh₂eǵrom", "ˈtreyes",
+               "h₂ster-", "h₂enh₁mos", "ˈseptṃ")
 inventory <- gsub("(d)(ʰ|ʷʰ|ʰʷ)", "t\\2", inventory, perl = T)
 inventory <- gsub("(b)(ʰ|ʷʰ|ʰʷ)", "p\\2", inventory, perl = T)
 inventory <- gsub("(g)(ʰ|ʷʰ|ʰʷ)", "k\\2", inventory, perl = T)
@@ -96,7 +99,7 @@ that have no solid explanation
 \right.
 \]
 
-PIE 2ord final \*m becomes PG \*n
+PIE word final \*m becomes PG \*n
 
 ```{r Nasal Coronalization}
 inventory <- gsub("m$", "n", inventory, perl = T)
@@ -128,3 +131,88 @@ inventory <- gsub("m$", "n", inventory, perl = T)
 ~/~
 \rule[-1.5pt]{1.5ex}{.5pt}\#
 \]
+
+PIE word-initial \*h₁, \*h₂, and \*h₃ become PG \*e, \*a, and \*o respectively.
+```{r Initial Laryngeal Vocalization}
+inventory <- gsub("^h₁", "e", inventory, perl = T)
+inventory <- gsub("^h₂", "a", inventory, perl = T)
+inventory <- gsub("^h₃", "o", inventory, perl = T)
+```
+
+\[
+\mathrm{*h₁} \rightarrow \mathrm{*e} ~/~ \#\rule[-1.5pt]{1.5ex}{.5pt}
+\]
+
+\[
+\mathrm{*h₂} \rightarrow \mathrm{*a} ~/~ \#\rule[-1.5pt]{1.5ex}{.5pt}
+\]
+
+\[
+\mathrm{*h₃} \rightarrow \mathrm{*o} ~/~ \#\rule[-1.5pt]{1.5ex}{.5pt}
+\]
+
+PIE interconsonantal laryngeals show the same reflexes as the word-initial.
+```{r Interconsonantal Laryngeal Vocalization}
+inventory <- gsub("(t|tʰ|d|s|p|pʰ|b|k|kʰ|g|h|m|n|l|r)h₁(t|tʰ|d|s|p|pʰ|b|k|kʰ|g|h|m|n|l|r)",
+                  "\\1e\\2", inventory, perl = T)
+inventory <- gsub("(t|tʰ|d|s|p|pʰ|b|k|kʰ|g|h|m|n|l|r)h₂(t|tʰ|d|s|p|pʰ|b|k|kʰ|g|h|m|n|l|r)",
+                  "\\1a\\2", inventory, perl = T)
+inventory <- gsub("(t|tʰ|d|s|p|pʰ|b|k|kʰ|g|h|m|n|l|r)h₃(t|tʰ|d|s|p|pʰ|b|k|kʰ|g|h|m|n|l|r)",
+                  "\\1o\\2", inventory, perl = T)
+```
+
+\[
+\mathrm{*h₁} \rightarrow \mathrm{*e} ~/~ \mathrm{C}\rule[-1.5pt]{1.5ex}{.5pt}\mathrm{C}
+\]
+
+\[
+\mathrm{*h₂} \rightarrow \mathrm{*a} ~/~ \mathrm{C}\rule[-1.5pt]{1.5ex}{.5pt}\mathrm{C}
+\]
+
+\[
+\mathrm{*h₃} \rightarrow \mathrm{*o} ~/~ \mathrm{C}\rule[-1.5pt]{1.5ex}{.5pt}\mathrm{C}
+\]
+
+PIE syllabic \*m and \*n may have become PG \*a by this time.
+
+```{r Syllabic Nasal Vocalization}
+inventory <- gsub('(ṃ|ṇ)', 'a', inventory, perl = T)
+```
+
+\[
+\begin{matrix}
+  \textrm{*ṃ~*ṇ} \\ % had to switch to make the accents work. I don't like it either.
+  \left[
+    \begin{matrix}
+      +~\mathrm{cons} \\
+      -~\mathrm{son} \\
+      +~\mathrm{syl}\\
+      \alpha~\mathrm{lab} \\
+      \beta~\mathrm{cor} \\
+      +~\mathrm{nas}
+    \end{matrix}
+  \right]
+\end{matrix}
+\rightarrow
+\begin{matrix}
+  \mathrm{*a} \\
+  \left[
+    \begin{matrix}
+      -~\mathrm{con} \\
+      -~\mathrm{high} \\
+      +~\mathrm{low} \\
+      -~\mathrm{front} \\
+      -~\mathrm{back} \\
+      -~\mathrm{rnd}
+    \end{matrix}
+  \right]
+\end{matrix}
+\]
+
+
+
+
+
+
+
+

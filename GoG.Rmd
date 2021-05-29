@@ -93,8 +93,8 @@ that have no solid explanation
 ~/~
 \left\{
   \begin{matrix}
-    \#\rule[-1.5pt]{1.5ex}{.5pt}V \\
-    V\rule[-1.5pt]{1.5ex}{.5pt}V
+    \#\rule[-1.5pt]{1.5ex}{.5pt}\mathrm{V} \\
+    \mathrm{V}\rule[-1.5pt]{1.5ex}{.5pt}\mathrm{V}
   \end{matrix}
 \right.
 \]
@@ -181,7 +181,7 @@ inventory <- gsub('(ṃ|ṇ)', 'a', inventory, perl = T)
 
 \[
 \begin{matrix}
-  \textrm{*ṃ~*ṇ} \\ % had to switch to make the accents work. I don't like it either.
+  *\textrm{ṃ}~*\textrm{ṇ} \\
   \left[
     \begin{matrix}
       +~\mathrm{cons} \\

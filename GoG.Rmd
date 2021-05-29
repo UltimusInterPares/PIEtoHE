@@ -87,14 +87,11 @@ Word initial shenanigans concerning PIE \*y
 that have no solid explanation
 
 \[
-\mathrm{*s}
-\rightarrow
-\mathrm{*h}
-~/~
+\mathrm{*j}
 \left\{
   \begin{matrix}
-    \#\rule[-1.5pt]{1.5ex}{.5pt}\mathrm{V} \\
-    \mathrm{V}\rule[-1.5pt]{1.5ex}{.5pt}\mathrm{V}
+    \rightarrow\mathrm{*h}~/~\#\rule[-1.5pt]{1.5ex}{.5pt}? \\
+    ~\rightarrow\mathrm{*zd}~/~\#\rule[-1.5pt]{1.5ex}{.5pt}?
   \end{matrix}
 \right.
 \]
